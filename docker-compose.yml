@@ -1,0 +1,17 @@
+services:
+  app:
+    build: .
+    container_name: pedantic_noether
+    ports:
+      - "15789:15789"
+      - "15791:15791"
+    volumes:
+      - ./etc/cron.d/e2scrub_all:/etc/cron.d/e2scrub_all
+      - type: bind
+        source: /mnt/c/tmp/docker/openclaw/home/node/.openclaw
+        target: /home/node/.openclaw
+    environment:
+      - HOME=/home/node
+    env_file:
+      - .env
+    restart: unless-stopped
