@@ -1,3 +1,7 @@
+## about
+* これはOpenClaw をWindows docker 上で作成するリポジトリです。
+* 手順はopenclaw の公式を参考にしています。https://docs.openclaw.ai/start/getting-started
+
 ### setup
 * .env ファイルを作成し、OPENAI_API_KEY="*****" を記載してください
 
