@@ -6,7 +6,7 @@ services:
       - "15789:15789"
       - "15791:15791"
     volumes:
-      - ./etc/cron.d/e2scrub_all:/etc/cron.d/e2scrub_all
+      - ./etc/cron.d/:/etc/cron.d
       - type: bind
         source: /mnt/c/tmp/docker/openclaw/home/node/.openclaw
         target: /home/node/.openclaw
